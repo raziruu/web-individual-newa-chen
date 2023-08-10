@@ -1,0 +1,489 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.Roominformation .heading{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.Roominformation .accommodation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.images-sec{
+    width: 100%;
+
+    background-color: #ffffff;
+    height: 500px;
+}
+.images-sec img{
+    width: 100%;
+    height: 100%;
+
+
+}
+.covers{
+
+    position: absolute;
+    text-align: center;
+}
+.covers h1{
+    font-weight: 700;
+    font-size: 50px;
+    font-family: "Segoe Print";
+    color: rgb(255, 254, 254);
+    text-shadow: 5px 5px 10px #2d2d2de2;
+
+}
+.covers h2 {
+    font-weight: 700;
+    font-size: 50px;
+    font-family: "Segoe Print";
+    color: rgb(255, 254, 254);
+    text-shadow: 5px 5px 10px #2d2d2de2;
+
+}
+.covers h3 {
+    font-weight: 600;
+    font-size: 50px;
+    font-family: "Segoe Print";
+    color: rgb(255, 254, 254);
+    text-shadow: 5px 5px 10px #2d2d2de2;
+
+}
+.about-us button a{
+    color:white;
+}
+.covers p{
+
+    font-family: "Brush Script MT";
+    color: rgb(255 255 255);
+    font-size: 40px;
+    text-shadow: 5px 5px 10px #000000e2;
+
+
+}
+/* Styles for .Roominformation section */
+.Roominformation {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.Roominformation .heading {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.Roominformation .accommodation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Roominformation .rooms {
+    width: 300px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    background-color: #f5f5f5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Roominformation .rooms:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Roominformation .rooms img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.Roominformation .rooms h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Roominformation .rooms p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.Roominformation .rooms button a {
+    background-color: #8b0000;
+    border: none;
+    /* border-radius: 20px;550101 */
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.Roominformation .rooms button a:hover {
+    background-color: #550101;
+}
+
+/*
+.rooms #zoom-in img{
+  transform: scale(1);
+  transition: 0.3s ease-out;
+}
+
+.rooms #zoom-in:hover img{
+  transform: scale(1.05);
+} */
+
+.CheckGallery, .reviews, .readBlogs{
+    justify-content: center;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.CheckGallery .GalleryPic {
+    width: 100%;
+    font-size: 15px;
+    padding: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CheckGallery .GalleryPic img {
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.CheckGallery .GalleryPic button{
+    background: transparent;
+    padding-top: 15px;display: inline-block;
+    border: 0px;
+    margin: 20px;
+}
+.CheckGallery .GalleryPic button a {
+    background-color: var(--white);
+    border: 1px solid black;display: inline-block;
+    border-radius: 20px;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+}
+.CheckGallery .GalleryPic button a:hover {
+    background-color: var(--primary);
+    color: var(--white);display: inline-block;
+}
+
+
+/* Styles for .mid-body section */
+.mid-body {
+    display: flex;
+    padding: 5% 2%; /* Adjusted padding for more spacing */
+    height: auto; /* Changed height to auto for better responsiveness */
+    width: 100%;
+    background-color: #1a1a1a;
+}
+
+.left-body {
+    background-color: #1a1a1a;
+    height: 100%;
+    width: 60%; /* Reduced width for better balance */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.lower_left {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.lower_left div:nth-child(1) {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.lower_left div:nth-child(2) p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.lower_left div:nth-child(2) button a {
+    background-color: #8b0000;
+    border: none;
+    /* border-radius: 20px; */
+    color: #ffffff;display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.lower_left div:nth-child(2) button a:hover {
+    background-color: #550101;
+}
+
+/* Rest of your existing styles for .right-body section */
+
+.right-body {
+    background-color: hsl(0, 0%, 0%);
+    height: 100%;
+    width: 30%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(59, 59, 59, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.right-body:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.lower-body {
+    padding-top: 30px;
+    /* justify-content: space-between; */
+    display: flex;
+    /* justify-content:space-around; */
+    flex-direction: row;
+
+    /* display: flex; */
+    /* padding-right: 250px; */
+}
+/* .lower-body div{
+  padding-right:300px;
+} */
+.right-body h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #8b0000;
+    font-size:24px;
+    /* text-decoration: bold; */
+    /* font-display: ; */
+}
+.right-body h2 {
+    font-weight: 600;
+    color: aliceblue;
+    /* padding-inline-start: 10px; */
+    align-content: space-around;
+    padding: 1%
+}
+.right-body p {
+    font-weight: 400;
+    color: aliceblue;
+    padding: 1%;
+    /* padding-top: 10px; */
+    /* text-decoration: underline; */
+}
+.right-body hr {
+    /* border: none; */
+    height: 1px;
+    background: rgb(255, 255, 255);
+}
+
+/* .lower-body div div{
+  display:flex; */
+
+/* } */
+.lower-img {
+    display: flex;
+
+    /* margin-right: 10px; */
+
+    /* justify-content: space-between; */
+}
+.lower-img div:nth-child(2) h1 {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 24px;
+    color:hsl(233, 8%, 79%) ;
+}
+.lower-img div {
+    padding-right: 20px;
+}
+.lower-img div:nth-child(2) h2,p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: 24px; */
+}
+/* Styles for .about-us section */
+/* Styles for .about-us section */
+.about-us {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.about-us button a {
+    background-color: #8b0000;
+    border: none;
+    /* border-radius: 20px; */
+    color: #ffffff;
+    text-decoration: none;display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.about-us button a:hover {
+    background-color: #550101;
+}
+
+
+.fab, .far {
+    font-weight: 700;
+    font-size: 25px;
+    padding: 5px;
+}
+.container{
+    height:fit-content;
+    width:100%;
+    background-color:hsl(0, 0%, 100%);
+}
+.container h2{
+    padding:20px;
+    color:#383838;
+}
+.full-half{
+    height:30px;
+    background-color:rgb(255, 255, 255);
+    margin:20px;
+    padding-left:5px;
+    border:1px solid;
+}
+.submit-bottom{
+    height:30px;
+    width:150px;
+    margin-left:20px;
+    border-color: #8b0000;
+    box-shadow: none;
+    border:0;
+    color: rgb(253, 253, 253);
+    background-color: #8b0000;
+}
+.submit-bottom:hover{
+    background-color: #8b0000;
+
+}
+@media only screen and (max-width:475px) {
+    .mid-body {
+        margin: 0;
+        display: block;
+        height: max-content;
+        width: 100%;
+
+    }
+
+    .mid-body img {
+        width: 150%;
+    }
+
+    .lower_left {
+        width: 150%;
+        /*     width:max-content; */
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .lower_left div:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: "Brush Script MT";
+        font-size: 18px;
+    }
+
+    .lower_left div:nth-child(2) {
+        width: 100%;
+
+    }
+
+    .lower_left div:nth-child(2) p {
+        font-size: 14px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .right-body {
+        width: 100%;
+
+        margin: 10% 0 0 0;
+    }
+
+    .right-body h1, h2 {
+        font-size: 18px;
+    }
+
+    .right-body p {
+        font-size: 14px;
+    }
+    .about-us h1{
+        padding-top:5px;
+        font-size:14px;
+    }
+    .about-us{
+        height:fit-content;
+    }
+    .about-us h2{
+        padding-top:5px;
+        font-size:18px;
+    }
+    .about-us button{
+        height:30px;
+        width:120px;
+        font-size:14px;display: inline-block;
+        margin-bottom:20px;
+    }
+
+
+}
+

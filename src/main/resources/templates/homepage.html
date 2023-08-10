@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>Newa Chen</title>
+  
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" type="x-icon" th:href="@{~/images/logo-b.png}">
+  <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/HomepageStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/checkOffer.css}">
+</head>
+
+<body>
+  <section>
+    <div th:replace="fragments/Navi_frag :: navigator"></div>
+
+    <section>
+      <div class="mid-body">
+        <div class="left-body">
+          <img th:src="@{~/images/home1.jpg}" />
+          <div class="lower_left">
+            <div>
+              <h>Welcome to Newa Chen </h>
+            </div>
+            <div>
+              <p>""Embrace Tradition, Experience Comfort: Your Home in the Heart of Newari Culture!""</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-body">
+          <h1>Newari Dishes</h1>
+          <h2>Newari Set</h2>
+          <p>All the dishes together represent celebration and festivity to the Newar people. The Samaya Baji symbolizes good luck, fortune, health and longevity</p>
+          <hr />
+          <h2>Choila</h2>
+          <p>Choila is a famous and desired appetizer served together with Baji (beaten rice).Choila meaning 'Roasted Meat' is one of the most prominent dishes in Newari culture of Nepal from ancient time.</p>
+          <hr />
+          <h2>Bara </h2>
+          <p>Thick savory pancakes made from lentil paste  mixed with spices such as asefoetida, cumin, turmeric, and ginger, which together give the bara flavor beyond just a simple batter.</p>
+          <hr />
+          <h2>Yomari</h2>
+          <p>a steamed fish-shaped dumpling covered in new-harvest rice flour and filled with chaku (molasses) or khuwa (condensed milk) and sesame seeds.</p>
+          
+        </div>
+      </div>
+
+
+
+
+    <!-- image -->
+
+
+
+    <!--  -->
+    <!-- information div -->
+
+
+    <div class="Roominformation">
+      <div class="heading">
+        <h1>Accomodation</h1>
+      </div>
+      <div class="accommodation">
+        <div class="rooms">
+          <!-- <div id="zoom-in"> -->
+          <img th:src="@{~/images/premium1.jpg}" alt="Image Not Available">
+          <h2>Luxurious Newa Flat</h2>
+          <p>Testament to elegance and comfort, seamlessly blending modern sophistication with timeless charm. </p>
+          <button><a th:href="@{~/rooms/premiumroom}">Details</a></button>
+          <!-- </div> -->
+        </div>
+        <div class="rooms">
+          <!-- <div id="zoom-in"> -->
+          <img th:src="@{~/images/coupleroom3.jpg}" alt="">
+          <!-- </div> -->
+          <h2>Twin Bed Room</h2>
+          <p>Step into a world of cultural immersion and artistic finesse within the Newari-themed twin bed room.</p>
+          <button><a th:href="@{~/rooms/coupleroom}">Details</a></button>
+        </div>
+        <div class="rooms">
+          <!-- <div id="zoom-in"> -->
+          <img th:src="@{~/images/luxeroom1.jpg}" alt="">
+          <h2>Single Bed Room</h2>
+          <p>Celebration of intricate craftsmanship and cultural elegance, inviting solo travelers to immerse themselves in a world of authenticity and comfort.</p>
+          <button><a th:href="@{~/rooms/luxeroom}">Details</a></button>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+   <div class="about-us">
+     <h2>About Us</h2>
+     <h1>
+      <p>Welcome to Newa Chen, where Newari traditions come to life in every detail. Nestled in the heart of Kathmandu, our Newari-themed hotel offers an immersive experience that celebrates the richness of Newari culture, cuisine, and hospitality.</p>
+
+      <p>At Newa Chen, we believe that hospitality is more than just accommodation; it's a journey of cultural discovery. Inspired by the centuries-old Newari heritage, our establishment was born out of a passion to provide guests with an authentic experience that captures the essence of Nepal's history.</p>
+     </h1>
+
+
+      <button><a th:href="@{~/homepage/about}" >read more</a>  </button>
+
+   </div>
+    <!-- reviews -->
+
+  </section>
+
+  <script>
+    const popup=document.querySelector('.popup');
+    const close=document.querySelector('.close');
+    window.onload = function(){
+      setTimeout(function(){
+        popup.style.display="block"
+      }, 5000)
+    }
+    close.addEventListener('click' , () => {
+      popup.style.display= "none";
+    })
+  </script>
+
+  <div class="suggest-problem">
+
+  </div>
+  <div class="container-fluid contact" >
+    <div class="container" id="contacts">
+      <form th:method="post" th:action="@{/user/savefeedback}" th:object="${feedback}">
+        <h2>Guest Experience Feedback</h2>
+        <input type="email" placeholder="Email"  class="full-half" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required th:field="*{email}" th:value="${feedback.email}">
+        <input type="text" placeholder="Name"   class="full-half" required th:field="*{fullname}" th:value="${feedback.fullname}">
+        <input type="text" placeholder="Subject"  class="full-half "required th:field="*{subject}" th:value="${feedback.subject}">
+        <input type="Message" placeholder="Message Us" class="full-half" required th:field="*{message}" th:value="${feedback.message}">
+        <input type="submit" class ="submit-bottom" onclick="allert()" value="Send">
+      </form>
+    </div>
+  </div>
+
+
+  <div th:replace="fragments/Footer_frag.html :: footer"></div>
+</section>
+<script>
+  function allert(){
+    alert("Successfully Submitted")
+  }
+</script>
+</body>
+
+
+<script>
+  let myPage = "homepage";
+  let listGroupItem = Array.from(document.getElementsByClassName("list-group-item"));
+  listGroupItem.forEach(i=>{
+    i.classList.remove("active")
+  })
+  let activeID = document.getElementById(myPage);
+  activeID.classList.add("active");
+</script>
+
+
+</html>
